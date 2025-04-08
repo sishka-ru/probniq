@@ -21,12 +21,8 @@ def main_menu_keyboard():
 @dp.message_handler(commands=["start"])
 async def send_welcome(message: types.Message):
     await message.answer_photo(photo=open("media/welcome.jpg", "rb"),
-        caption="Привет! Этот бот поможет тебе узнать секреты алгоритмов 1WIN и заработать.
-
-"
-                "Но для начала тебе нужно пройти регистрацию и пополнить баланс.
-
-"
+        caption="Привет! Этот бот поможет тебе узнать секреты алгоритмов 1WIN и заработать."
+                "Но для начала тебе нужно пройти регистрацию и пополнить баланс."
                 "Готов? Жми кнопку ниже!",
         reply_markup=main_menu_keyboard())
 
