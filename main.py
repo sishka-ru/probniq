@@ -29,41 +29,27 @@ async def send_welcome(message: types.Message):
 @dp.message_handler(lambda message: message.text.lower() == "старт")
 async def handle_start(message: types.Message):
     await message.answer_photo(photo=open("media/legend.jpg", "rb"),
-        caption="Меня зовут Артём, я бывший сотрудник 1WIN.
-
-"
-                "Я создал бота, чтобы делиться алгоритмами, которые раньше сам писал для них.
-
-"
+        caption="Меня зовут Артём, я бывший сотрудник 1WIN."
+                "Я создал бота, чтобы делиться алгоритмами, которые раньше сам писал для них."
                 "Чтобы получить доступ к алгоритму, пройди шаги ниже.",
         reply_markup=main_menu_keyboard())
 
 @dp.message_handler(lambda message: message.text.lower() == "регистрация")
 async def handle_register(message: types.Message):
     await message.answer_photo(photo=open("media/register.jpg", "rb"),
-        caption="1. Перейди по ссылке: https://1wqjnb.com/?p=d57c
-"
-                "2. Введи промокод: TYKI
-"
-                "3. Пополни баланс от 500 рублей
-
-"
+        caption="1. Перейди по ссылке: https://1wqjnb.com/?p=d57c"
+                "2. Введи промокод: TYKI"
+                "3. Пополни баланс от 500 рублей"
                 "После пополнения вернись и нажми 'Получить доступ'.",
         reply_markup=main_menu_keyboard())
 
 @dp.message_handler(lambda message: message.text.lower() == "помощь")
 async def handle_help(message: types.Message):
     await message.answer_photo(photo=open("media/help.jpg", "rb"),
-        caption="Если возникли трудности:
-
-"
-                "- Убедись, что перешёл по ссылке и ввёл промокод TYKI
-"
-                "- Пополни баланс от 500₽
-"
-                "- Если всё сделал — возвращайся и жми 'Получить доступ'
-
-"
+        caption="Если возникли трудности:"
+                "- Убедись, что перешёл по ссылке и ввёл промокод TYKI"
+                "- Пополни баланс от 500₽"
+                "- Если всё сделал — возвращайся и жми 'Получить доступ'"
                 "Поддержка: @support_username",
         reply_markup=main_menu_keyboard())
 
